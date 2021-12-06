@@ -22,14 +22,6 @@ class SleepingCheckerService(val database: UrlRepository) {
 
         database.deleteById(id)
     }
-
-/*
-//  update Data from Database
-    fun updateDataById(id: String, updateString: String){
-        val oldData = database.findByLastname()
-
-    }
-*/
 }
 
 
