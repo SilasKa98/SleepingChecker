@@ -13,7 +13,7 @@ import javax.annotation.PostConstruct
 class SleepingCheckerRun(val database: UrlRepository ) {
 
     @PostConstruct
-    fun checkSleep() {
+    fun init() {
         val timer = Timer()
         timer.schedule(object : TimerTask() {
             override fun run() {
@@ -35,7 +35,7 @@ class SleepingCheckerRun(val database: UrlRepository ) {
                     }
                 }
             }
-        }, 0, 1500000) //call the server every
+        }, 0, 900000) //call the server every
     }
 
 }
