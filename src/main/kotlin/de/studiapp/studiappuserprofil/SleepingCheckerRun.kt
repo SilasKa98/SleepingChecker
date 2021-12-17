@@ -10,14 +10,14 @@ import java.util.*
 import javax.annotation.PostConstruct
 
 @Component
-class SleepingCheckerRun(val database: UrlRepository ) {
+class SleepingCheckerRun(val database: SleepingCheckerResource ) {
 
     @PostConstruct
     fun init() {
         val timer = Timer()
         timer.schedule(object : TimerTask() {
             override fun run() {
-                val urls = database.findAll()
+                val urls = database.getAllUrls()
                 val urlList = arrayListOf<String>()
                 for(i in urls){
                     urlList.add(i.url)
