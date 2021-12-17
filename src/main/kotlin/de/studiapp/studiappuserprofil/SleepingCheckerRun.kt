@@ -35,7 +35,7 @@ class SleepingCheckerRun(val database: SleepingCheckerResource ) {
                     }
                 }
             }
-        }, 0, 900000) //call the server every
+        }, 0, 600000) //call the server every
     }
 
 }
