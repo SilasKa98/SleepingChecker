@@ -56,7 +56,7 @@ class SleepingCheckerResource() {
     }
 
     @DeleteMapping("/{id}")
-    fun delUserProfileData(@PathVariable id: String): ResponseEntity<String> {
+    fun delUrls(@PathVariable id: String): ResponseEntity<String> {
         val client = HttpClient.newBuilder().build()
         val request = HttpRequest.newBuilder().uri(URI.create("$firebaseDbURL$id.json")).DELETE().build()
         val response = client.send(request, HttpResponse.BodyHandlers.ofString())
